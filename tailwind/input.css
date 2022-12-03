@@ -1,0 +1,57 @@
+/*
+Theme Name: Custom Tailwind
+Theme URI: https://wordpress.org/themes/twentytwentyone/
+Author: the WordPress team
+Author URI: https://wordpress.org/
+Description: this is my custom & completed made designed by MySelf .
+Version: 1.0
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@300;400;500;600;700&&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  @apply dark:bg-slate-900 text-black dark:text-slate-400 bg-stone-100;
+}
+
+a {
+  @apply text-slate-800 hover:text-slate-900 dark:text-slate-100 dark:hover:text-slate-300 duration-300;
+}
+
+h1,
+h2,
+h3,
+h5,
+h4,
+h6 {
+  @apply text-black dark:text-slate-100;
+}
+.navbar-fixed {
+  @apply shadow-lg dark:bg-slate-800/10 dark:border-b border-indigo-500/20;
+}
+.categories::-webkit-scrollbar {
+  @apply hidden;
+}
+.wrapper {
+  @apply flex flex-col justify-between h-screen max-w-5xl text-left mx-auto mt-12 gap-2;
+}
+
+.form-control {
+  @apply w-full text-sm font-normal border border-pink-500 text-gray-700 leading-8 outline-none box-border transition-all duration-75 bg-clip-padding appearance-none;
+}
+
+.form-control:focus,
+.form-select:focus {
+  @apply outline-none;
+  box-shadow: 0 0 8px 0 rgb(236 72 153);
+}
