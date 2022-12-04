@@ -6,7 +6,16 @@ module.exports = {
   ],
   darkMode: "class", // or media & false
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        facebook: "#3b5998",
+        google: "#DB4437",
+        twitter: "#1DA1F2",
+        instagram: "#fdf497",
+        whatsapp: "#075E54",
+        linkedin: "#0072b1",
+      },
+    },
   },
   plugins: [require("tw-elements/dist/plugin")],
 };

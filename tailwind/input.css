@@ -55,3 +55,14 @@ h6 {
   @apply outline-none;
   box-shadow: 0 0 8px 0 rgb(236 72 153);
 }
+
+/* animation animated text */
+@keyframes animate {
+  40%,
+  60% {
+    left: calc(100% + 4px);
+  }
+  100% {
+    left: 0%;
+  }
+}
