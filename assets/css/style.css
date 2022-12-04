@@ -5239,6 +5239,10 @@ textarea.form-control.is-invalid{
   top: -1rem;
 }
 
+.top-12{
+  top: 3rem;
+}
+
 .isolate{
   isolation: isolate;
 }
@@ -5253,6 +5257,10 @@ textarea.form-control.is-invalid{
 
 .z-0{
   z-index: 0;
+}
+
+.col-span-full{
+  grid-column: 1 / -1;
 }
 
 .float-right{
@@ -5298,6 +5306,11 @@ textarea.form-control.is-invalid{
   margin-right: 24rem;
 }
 
+.mx-2{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mt-12{
   margin-top: 3rem;
 }
@@ -5310,16 +5323,12 @@ textarea.form-control.is-invalid{
   margin-bottom: 0.75rem;
 }
 
-.mr-2{
-  margin-right: 0.5rem;
-}
-
 .-mt-4{
   margin-top: -1rem;
 }
 
-.mb-4{
-  margin-bottom: 1rem;
+.mb-2{
+  margin-bottom: 0.5rem;
 }
 
 .mb-0{
@@ -5328,10 +5337,6 @@ textarea.form-control.is-invalid{
 
 .mt-2{
   margin-top: 0.5rem;
-}
-
-.mb-2{
-  margin-bottom: 0.5rem;
 }
 
 .box-border{
@@ -5442,8 +5447,12 @@ textarea.form-control.is-invalid{
   height: 100%;
 }
 
-.h-4{
-  height: 1rem;
+.h-28{
+  height: 7rem;
+}
+
+.h-8{
+  height: 2rem;
 }
 
 .h-10{
@@ -5458,10 +5467,6 @@ textarea.form-control.is-invalid{
   height: calc(100% - 0.25rem);
 }
 
-.h-28{
-  height: 7rem;
-}
-
 .w-full{
   width: 100%;
 }
@@ -5474,20 +5479,28 @@ textarea.form-control.is-invalid{
   width: 1.25rem;
 }
 
-.w-4{
-  width: 1rem;
-}
-
 .w-1\/5{
   width: 20%;
+}
+
+.w-28{
+  width: 7rem;
+}
+
+.w-8{
+  width: 2rem;
 }
 
 .w-\[calc\(100\%_-_2rem\)\]{
   width: calc(100% - 2rem);
 }
 
-.w-28{
-  width: 7rem;
+.w-3\/4{
+  width: 75%;
+}
+
+.w-1\/4{
+  width: 25%;
 }
 
 .max-w-5xl{
@@ -6305,16 +6318,16 @@ textarea.form-control.is-invalid{
   border-radius: 9999px;
 }
 
+.rounded-\[50\%\]{
+  border-radius: 50%;
+}
+
 .rounded-sm{
   border-radius: 0.125rem;
 }
 
 .rounded{
   border-radius: 0.25rem;
-}
-
-.rounded-\[50\%\]{
-  border-radius: 50%;
 }
 
 .rounded-t{
@@ -6427,6 +6440,10 @@ textarea.form-control.is-invalid{
 .bg-rose-500{
   --tw-bg-opacity: 1;
   background-color: rgb(244 63 94 / var(--tw-bg-opacity));
+}
+
+.bg-white\/20{
+  background-color: rgb(255 255 255 / 0.2);
 }
 
 .bg-blue-600{
@@ -6599,12 +6616,12 @@ textarea.form-control.is-invalid{
   padding: 1.25rem;
 }
 
-.p-6{
-  padding: 1.5rem;
-}
-
 .p-4{
   padding: 1rem;
+}
+
+.p-6{
+  padding: 1.5rem;
 }
 
 .px-4{
@@ -6647,6 +6664,10 @@ textarea.form-control.is-invalid{
   padding-bottom: 0.625rem;
 }
 
+.pl-5{
+  padding-left: 1.25rem;
+}
+
 .pb-2{
   padding-bottom: 0.5rem;
 }
@@ -6669,18 +6690,6 @@ textarea.form-control.is-invalid{
 
 .pb-5{
   padding-bottom: 1.25rem;
-}
-
-.pl-10{
-  padding-left: 2.5rem;
-}
-
-.pl-5{
-  padding-left: 1.25rem;
-}
-
-.pr-5{
-  padding-right: 1.25rem;
 }
 
 .text-left{
@@ -6747,16 +6756,16 @@ textarea.form-control.is-invalid{
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
+.font-\[\'Courgette\'\2c _cursive\]{
+  font-family: 'Courgette', cursive;
+}
+
 .font-\[\'some_font\'\2c sans-serif\]{
   font-family: 'some font',sans-serif;
 }
 
 .font-\[\"some_font\"\2c sans-serif\]{
   font-family: "some font",sans-serif;
-}
-
-.font-\[\'Courgette\'\2c _cursive\]{
-  font-family: 'Courgette', cursive;
 }
 
 .text-base{
@@ -6900,11 +6909,6 @@ textarea.form-control.is-invalid{
 .text-gray-900{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
-.text-rose-600{
-  --tw-text-opacity: 1;
-  color: rgb(225 29 72 / var(--tw-text-opacity));
 }
 
 .text-\[\#336699\]\/\[\.35\]{
@@ -7585,14 +7589,6 @@ h6{
   background-color: inherit;
 }
 
-.dark .dark\:bg-white\/10{
-  background-color: rgb(255 255 255 / 0.1);
-}
-
-.dark .dark\:bg-white\/20{
-  background-color: rgb(255 255 255 / 0.2);
-}
-
 .dark .dark\:bg-white\/5{
   background-color: rgb(255 255 255 / 0.05);
 }
@@ -7667,6 +7663,23 @@ h6{
     position: static;
   }
 
+  .md\:col-span-1{
+    grid-column: span 1 / span 1;
+  }
+
+  .md\:col-span-4{
+    grid-column: span 4 / span 4;
+  }
+
+  .md\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
+
+  .md\:mx-0{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .md\:mb-0{
     margin-bottom: 0px;
   }
@@ -7691,8 +7704,40 @@ h6{
     width: 80%;
   }
 
+  .md\:w-full{
+    width: 100%;
+  }
+
+  .md\:w-3\/4{
+    width: 75%;
+  }
+
+  .md\:w-1\/4{
+    width: 25%;
+  }
+
+  .md\:w-1\/5{
+    width: 20%;
+  }
+
+  .md\:w-3\/5{
+    width: 60%;
+  }
+
+  .md\:w-2\/5{
+    width: 40%;
+  }
+
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-6{
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:flex-row{
@@ -7705,10 +7750,6 @@ h6{
 
   .md\:items-center{
     align-items: center;
-  }
-
-  .md\:justify-start{
-    justify-content: flex-start;
   }
 
   .md\:justify-center{
@@ -7818,6 +7859,22 @@ h6{
 @media (min-width: 1024px){
   .lg\:mb-0{
     margin-bottom: 0px;
+  }
+
+  .lg\:w-4\/5{
+    width: 80%;
+  }
+
+  .lg\:w-1\/5{
+    width: 20%;
+  }
+
+  .lg\:w-3\/4{
+    width: 75%;
+  }
+
+  .lg\:w-1\/4{
+    width: 25%;
   }
 
   .lg\:grid-cols-2{

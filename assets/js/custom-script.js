@@ -24,21 +24,19 @@ NavBarToggler.addEventListener("click", () => {
 const saveTheme = (theme) => {
   let svg = theme.nextElementSibling.children[0].outerHTML;
   ThemeIcon.innerHTML = svg;
+  document.getElementById(theme.id).checked = true;
   switch (theme.id) {
     case "light":
       localStorage.setItem("theme", "light");
       html.className = "light";
-      document.getElementById("light").checked = true;
       break;
     case "dark":
       localStorage.setItem("theme", "dark");
       html.className = "dark";
-      document.getElementById("dark").checked = true;
       break;
     default:
       localStorage.removeItem("theme");
       html.className = darkModeQuery.matches ? "dark" : "light";
-      document.getElementById("system").checked = true;
       break;
   }
 };
