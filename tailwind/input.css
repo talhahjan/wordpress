@@ -46,18 +46,18 @@ h6 {
   @apply flex flex-col justify-between h-screen max-w-5xl text-left mx-auto mt-12 gap-2;
 }
 
-.form-control {
+/* .form-control {
   @apply w-full text-sm font-normal border border-pink-500 text-gray-700 leading-8 outline-none box-border transition-all duration-75 bg-clip-padding appearance-none;
-}
+} */
 
-.form-control:focus,
+/* .form-control:focus,
 .form-select:focus {
   @apply outline-none;
   box-shadow: 0 0 8px 0 rgb(236 72 153);
-}
+} */
 
 /* animation animated text */
-@keyframes animate {
+/* @keyframes animate {
   40%,
   60% {
     left: calc(100% + 4px);
@@ -65,4 +65,4 @@ h6 {
   100% {
     left: 0%;
   }
-}
+} */
