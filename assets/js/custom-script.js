@@ -4,6 +4,7 @@ const navBar = document.querySelector("header nav"),
   ThemeIcon = document.getElementById("themeIcon"),
   themes = document.querySelectorAll('[name="theme"][type="radio"]'),
   html = document.documentElement,
+  defaultMode = "dark", // string : 'dark' , 'light' or 'system'
   darkModeQuery = matchMedia("(prefers-color-scheme: dark)");
 
 window.addEventListener("scroll", () => {
@@ -34,9 +35,13 @@ const saveTheme = (theme) => {
       localStorage.setItem("theme", "dark");
       html.className = "dark";
       break;
+    case "system":
+      localStorage.setItem("theme", "system");
+      html.className = darkModeQuery.matches ? "dark" : "light";
+      break;
     default:
       localStorage.removeItem("theme");
-      html.className = darkModeQuery.matches ? "dark" : "light";
+      html.className = defaultMode;
       break;
   }
 };
@@ -48,8 +53,11 @@ const onWindowLoad = () => {
   } else if (localStorage.theme === "light") {
     let theme = document.getElementById("light");
     saveTheme(theme);
-  } else {
+  } else if (localStorage.theme === "system") {
     let theme = document.getElementById("system");
+    saveTheme(theme);
+  } else {
+    let theme = document.getElementById(defaultMode);
     saveTheme(theme);
   }
 };
@@ -60,20 +68,3 @@ const onWindowLoad = () => {
 window.onload = (e) => {
   onWindowLoad();
 };
-
-const text = document.querySelector(".sec-text");
-
-const textLoad = () => {
-  setTimeout(() => {
-    text.textContent = "Freelancer";
-  }, 0);
-  setTimeout(() => {
-    text.textContent = "Blogger";
-  }, 4000);
-  setTimeout(() => {
-    text.textContent = "YouTuber";
-  }, 8000); //1s = 1000 milliseconds
-};
-
-textLoad();
-setInterval(textLoad, 12000);

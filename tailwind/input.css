@@ -21,11 +21,12 @@ body {
   font-family: "Poppins", sans-serif;
 }
 body {
-  @apply dark:bg-slate-900 text-black dark:text-slate-400 bg-stone-100;
+  @apply dark:bg-slate-900 text-slate-600 dark:text-slate-400;
+  background-color: #eee;
 }
 
 a {
-  @apply text-slate-800 hover:text-slate-900 dark:text-slate-100 dark:hover:text-slate-300 duration-300;
+  @apply text-black hover:text-slate-500 dark:text-slate-400 dark:hover:text-slate-100 duration-300;
 }
 
 h1,
@@ -34,7 +35,7 @@ h3,
 h5,
 h4,
 h6 {
-  @apply text-black dark:text-slate-100;
+  @apply text-slate-800 dark:text-slate-100;
 }
 .navbar-fixed {
   @apply shadow-lg dark:bg-slate-800/10 dark:border-b border-indigo-500/20;
@@ -45,24 +46,3 @@ h6 {
 .wrapper {
   @apply flex flex-col justify-between h-screen max-w-5xl text-left mx-auto mt-12 gap-2;
 }
-
-/* .form-control {
-  @apply w-full text-sm font-normal border border-pink-500 text-gray-700 leading-8 outline-none box-border transition-all duration-75 bg-clip-padding appearance-none;
-} */
-
-/* .form-control:focus,
-.form-select:focus {
-  @apply outline-none;
-  box-shadow: 0 0 8px 0 rgb(236 72 153);
-} */
-
-/* animation animated text */
-/* @keyframes animate {
-  40%,
-  60% {
-    left: calc(100% + 4px);
-  }
-  100% {
-    left: 0%;
-  }
-} */
