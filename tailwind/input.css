@@ -1,48 +1,154 @@
-/*
-Theme Name: Custom Tailwind
-Theme URI: https://wordpress.org/themes/twentytwentyone/
-Author: the WordPress team
-Author URI: https://wordpress.org/
-Description: this is my custom & completed made designed by MySelf .
-Version: 1.0
-*/
-
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@300;400;500;600;700&&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
-}
-body {
-  @apply dark:bg-slate-900 text-slate-600 dark:text-slate-400;
-  background-color: #eee;
+@layer base {
+  :root {
+    --color-text-dark-base: rgb(248, 250, 252);
+    --color-text-dark-base-alt: rgb(209, 213, 219);
+    --body-bg-dark: 15, 23, 42;
+    /*
+   above variables are for dark mode only, remember dark mode is in 
+   its self a theme,
+   dark mode variables should not be over-writen by any theme
+   although these following variables can be over-written in theme ,in order to create 
+   theme define css class staring with theme- (i,e theme-aqua, theme-indigo)
+   themes are automatically will be populated in theme menu dropdown,
+   by using javascript's  querySelector
+   */
+    --color-text-base: rgb(17, 24, 39);
+    --color-text-base-alt: rgb(100, 116, 139);
+    --color-text-primary: rgb(var(--fill-primary));
+    --color-text-muted: rgb(255, 228, 230);
+    --color-text-inverted: rgb(255, 255, 255);
+    --fill-primary: 244, 67, 54;
+    --fill-primary-alt: 252, 81, 81;
+    --body-bg: 238, 238, 238;
+  }
+
+  .dark {
+    --color-text-base: var(--color-text-dark-base);
+    --color-text-base-alt: var(--color-text-dark-base-alt);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply p-0 m-0 box-border font-Poppins font-normal bg-body dark:bg-body-dark text-color-base;
+  }
+
+  .navbar-fixed {
+    @apply shadow-lg dark:bg-slate-800/10 dark:border-b border-indigo-500/20;
+  }
+  .wrapper {
+    @apply flex flex-col justify-between h-screen max-w-5xl text-left mx-auto gap-2;
+  }
+
+  @keyframes typingText {
+    40%,
+    60% {
+      left: 100%;
+    }
+    100% {
+      left: 0%;
+    }
+  }
 }
 
-a {
-  @apply text-black hover:text-slate-500 dark:text-slate-400 dark:hover:text-slate-100 duration-300;
+.skin-fuchsia {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(250, 232, 255);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 217, 70, 239;
+  --fill-primary-alt: 192, 38, 211;
 }
 
-h1,
-h2,
-h3,
-h5,
-h4,
-h6 {
-  @apply text-slate-800 dark:text-slate-100;
+.skin-cyan {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(207, 250, 254);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 6, 182, 212;
+  --fill-primary-alt: 19, 195, 225;
 }
-.navbar-fixed {
-  @apply shadow-lg dark:bg-slate-800/10 dark:border-b border-indigo-500/20;
+
+.skin-teal {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(204, 251, 241);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 20, 184, 166;
+  --fill-primary-alt: 33, 197, 179;
 }
-.categories::-webkit-scrollbar {
-  @apply hidden;
+
+.skin-indigo {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(224, 231, 255);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 99, 102, 241;
+  --fill-primary-alt: 112, 115, 254;
 }
-.wrapper {
-  @apply flex flex-col justify-between h-screen max-w-5xl text-left mx-auto mt-12 gap-2;
+
+.skin-purple {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(243, 232, 255);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 168, 85, 247;
+  --fill-primary-alt: 181 98 255;
+}
+
+.skin-violet {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(237, 233, 254);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 139, 92, 246;
+  --fill-primary-alt: 152, 105, 255;
+}
+
+.skin-pink {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(252, 231, 243);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 236, 72, 153;
+  --fill-primary-alt: 249, 85, 166;
+}
+
+.skin-emerald {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(209, 250, 229);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 16, 185, 129;
+  --fill-primary-alt: 29, 198, 142;
+}
+
+.skin-red {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(254, 226, 226);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 244, 67, 54;
+  --fill-primary-alt: 252, 81, 81;
+}
+
+.skin-orange {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(255, 237, 213);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 249, 115, 22;
+  --fill-primary-alt: 255 128 35;
+}
+.skin-stone {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(rgb(245, 245, 244));
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 120, 113, 108;
+  --fill-primary-alt: 133, 126, 121;
+}
+
+.skin-fuchsia {
+  --color-text-primary: rgb(var(--fill-primary));
+  --color-text-muted: rgb(250, 232, 255);
+  --color-text-inverted: rgb(255, 255, 255);
+  --fill-primary: 217, 70, 239;
+  --fill-primary-alt: 230, 83, 252;
 }
